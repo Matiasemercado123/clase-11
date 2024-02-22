@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+/*------------  HEADER -----------*/
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: red; }
+
+.header nav a img {
+  width: 100px; }
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap; }
+
+.header nav ul li {
+  padding: 0 1rem; }
+
+.header nav ul li:hover {
+  background-color: red;
+  color: white;
+  text-decoration: underline;
+  /*transition le da un efecto*/
+  transition: all .3s; }
+
+.header nav ul li a {
+  color: #222222;
+  text-decoration: none;
+  padding: 0 1rem; }
+
+.header nav ul li a:hover {
+  color: white;
+  transition: all .3s; }
+
+/* MEDIDAS QUERYS - MOBILE LAST */
+@media (max-width: 600px) {
+  .header nav {
+    flex-direction: column; }
+    .header nav .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 100px);
+      /* grid-auto-columns: 1fr; */
+      /* gap: 0px 0px; */
+      /* grid-auto-flow: row; */
+      grid-template-areas: "promo1 promo1 promo1 promo2" "promo2 promo2 promo2 promo2" "promo3 promo3 promo4 promo6" "promo6 promo6 promo6 promo6"; } }
+
+/* ----------MAIN--------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  /* grid-auto-columns: 1fr; */
+  /* gap: 0px 0px; */
+  /* grid-auto-flow: row; */
+  grid-template-areas: "promo1 promo1 promo1 promo2" "promo3 promo3 promo4 promo2" "promo3 promo3 promo4 promo6" "promo5 promo5 promo4 promo6"; }
+
+.promo1 {
+  grid-area: promo1;
+  background-color: bisque; }
+
+.promo2 {
+  grid-area: promo2;
+  background-color: #a6ec75; }
+
+.promo3 {
+  grid-area: promo3;
+  background-color: #75ecbc; }
+
+.promo4 {
+  grid-area: promo4;
+  background-color: #8375ec; }
+
+.promo5 {
+  grid-area: promo5;
+  background-color: #e4cadc; }
+
+.promo6 {
+  grid-area: promo6;
+  background-color: #d395a5; }
+
+article h3 {
+  text-decoration: underline; }
+
+article p {
+  font-family: sans-serif;
+  font-size: 50px; }
+
+article button {
+  text-transform: uppercase; }
+  article button:hover {
+    background-color: black;
+    color: white; }
+
+/* Pseudoclase */
+.visitado:visited {
+  color: #b5b5b5;
+  color: white; }
+
+.montana:active {
+  background-color: #8375; }
+
+.coder:link {
+  color: #ec7587;
+  background-color: #a6ec75; }
+
+.promo3 ul:not(.coder) {
+  background-color: blue; }
+
+.grid div:nth-child(2) {
+  color: orange;
+  background-color: #f6cf85; }
+
+.header .banner-promo img {
+  width: 100vw; }

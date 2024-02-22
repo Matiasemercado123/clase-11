@@ -1,0 +1,62 @@
+/*------------  HEADER -----------*/
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: red;
+}    
+
+.header nav a img{
+    width: 100px;
+}
+
+.header nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header nav ul li{
+    padding: 0 1rem;
+}
+
+
+.header nav ul li:hover{
+    background-color: red;
+    color: white;
+    text-decoration: underline;
+    /*transition le da un efecto*/
+    transition: all .3s;
+}
+
+.header nav ul li a{
+    color: #222222;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+.header nav ul li a:hover{
+    color: white;
+    transition: all .3s;
+}
+
+/* MEDIDAS QUERYS - MOBILE LAST */
+@media (max-width: 600px){
+    .header nav{
+        flex-direction: column;
+
+        .grid {  display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            /* grid-auto-columns: 1fr; */
+            /* gap: 0px 0px; */
+            /* grid-auto-flow: row; */
+            grid-template-areas:
+              "promo1 promo1 promo1 promo2"
+              "promo2 promo2 promo2 promo2"
+              "promo3 promo3 promo4 promo6"
+              "promo6 promo6 promo6 promo6";
+          }
+    }
+}

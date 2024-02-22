@@ -1,0 +1,43 @@
+/* ----------MAIN--------- */
+.grid {  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    /* grid-auto-columns: 1fr; */
+    /* gap: 0px 0px; */
+    /* grid-auto-flow: row; */
+    grid-template-areas:
+      "promo1 promo1 promo1 promo2"
+      "promo3 promo3 promo4 promo2"
+      "promo3 promo3 promo4 promo6"
+      "promo5 promo5 promo4 promo6";
+  }
+  
+  .promo1 {
+    grid-area: promo1;
+    background-color: bisque;
+}
+
+.promo2 {
+    grid-area: promo2;
+    background-color: #a6ec75;
+}
+
+.promo3 {
+    grid-area: promo3;
+    background-color: #75ecbc;
+}
+
+.promo4 {
+    grid-area: promo4;
+    background-color: #8375ec;
+}
+  
+  .promo5 { 
+    grid-area: promo5; 
+    background-color: rgb(228, 202, 220);
+}
+  
+  .promo6 { 
+    grid-area: promo6; 
+    background-color: rgb(211, 149, 165);
+}
